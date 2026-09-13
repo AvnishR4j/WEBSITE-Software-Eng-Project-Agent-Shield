@@ -3,18 +3,17 @@ import { notFound } from "next/navigation";
 import { ArrowLeft, CalendarDays, Download, ExternalLink, FileText, GitCommitHorizontal, History, UserRound } from "lucide-react";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
-import { getPublishedVersion } from "@/lib/storage";
-import { initialDeliverable } from "@/lib/content";
+import { publishedDeliverables } from "@/lib/content";
 
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  return [{ slug: initialDeliverable.slug, version: initialDeliverable.version }];
+  return publishedDeliverables.map((item) => ({ slug: item.slug, version: item.version }));
 }
 
 export default async function DeliverableVersionPage({ params }: { params: Promise<{ slug: string; version: string }> }) {
   const { slug, version } = await params;
-  const item = await getPublishedVersion(slug, version);
+  const item = publishedDeliverables.find((candidate) => candidate.slug === slug && candidate.version === version);
   if (!item) notFound();
   return (
     <main>

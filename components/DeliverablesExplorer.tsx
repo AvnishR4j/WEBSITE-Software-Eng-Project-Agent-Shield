@@ -1,21 +1,15 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import { ArrowUpRight, FileText, Filter } from "lucide-react";
-import { initialDeliverable } from "@/lib/content";
+import { publishedDeliverables } from "@/lib/content";
 
-type Deliverable = typeof initialDeliverable;
+type Deliverable = (typeof publishedDeliverables)[number];
 
 export function DeliverablesExplorer() {
-  const [items, setItems] = useState<Deliverable[]>([initialDeliverable]);
+  const [items] = useState<readonly Deliverable[]>(publishedDeliverables);
   const [filter, setFilter] = useState("All");
-
-  useEffect(() => {
-    fetch("/api/deliverables").then(async (response) => response.ok ? await response.json() as { deliverables?: Deliverable[] } : null).then((data) => {
-      if (data?.deliverables?.length) setItems(data.deliverables);
-    }).catch(() => undefined);
-  }, []);
 
   const filters = useMemo(() => ["All", ...Array.from(new Set(items.map((item) => item.type)))], [items]);
   const filtered = filter === "All" ? items : items.filter((item) => item.type === filter);

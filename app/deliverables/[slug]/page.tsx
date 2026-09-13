@@ -1,17 +1,19 @@
 import Link from "next/link";
-import { initialDeliverable } from "@/lib/content";
+import { notFound } from "next/navigation";
+import { publishedDeliverables } from "@/lib/content";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  return [{ slug: initialDeliverable.slug }];
+  return Array.from(new Set(publishedDeliverables.map((item) => item.slug))).map((slug) => ({ slug }));
 }
 
 export default async function LatestDeliverablePage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const target = slug === initialDeliverable.slug ? initialDeliverable : initialDeliverable;
+  const target = publishedDeliverables.find((item) => item.slug === slug);
+  if (!target) notFound();
 
   return (
     <main>
