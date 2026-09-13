@@ -3,7 +3,6 @@ import "./globals.css";
 
 const productionHost = process.env.NEXT_PUBLIC_SITE_URL
   ?? (process.env.VERCEL_PROJECT_PRODUCTION_URL ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}` : "https://agentshield-ucs503.vercel.app");
-const siteBasePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 export const metadata: Metadata = {
   metadataBase: new URL(productionHost),
@@ -14,8 +13,8 @@ export const metadata: Metadata = {
   description:
     "A provider-independent security and governance gateway for AI-agent tool actions, built by a four-member Software Engineering team.",
   icons: {
-    icon: `${siteBasePath}/og.png`,
-    shortcut: `${siteBasePath}/og.png`,
+    icon: "/og.png",
+    shortcut: "/og.png",
   },
   openGraph: {
     title: "AgentShield | Every action earns trust",

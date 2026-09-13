@@ -1,15 +1,7 @@
 import type { NextConfig } from "next";
 
-const isGitHubPages = process.env.GITHUB_PAGES === "true";
-const repoName = "WEBSITE-Software-Eng-Project-Agent-Shield";
-
-const nextConfig: NextConfig = isGitHubPages
-  ? {
-      output: "export",
-      basePath: `/${repoName}`,
-      assetPrefix: `/${repoName}/`,
-      images: { unoptimized: true },
-    }
-  : {};
+const nextConfig: NextConfig = {
+  /* config options here */
+};
 
 export default nextConfig;

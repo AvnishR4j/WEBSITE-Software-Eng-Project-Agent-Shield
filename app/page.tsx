@@ -4,9 +4,7 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { DecisionGraphic } from "@/components/DecisionGraphic";
 import { TeamGrid } from "@/components/TeamGrid";
-import { project, publishedDeliverables } from "@/lib/content";
-
-const latestDeliverable = publishedDeliverables[0];
+import { initialDeliverable, project } from "@/lib/content";
 
 export default function Home() {
   return (
@@ -57,16 +55,16 @@ export default function Home() {
             <div className="file-glyph"><BookOpen size={25} /></div>
             <div>
               <p className="kicker">Latest publication</p>
-              <h2>{latestDeliverable.title}</h2>
-              <p>{latestDeliverable.changeSummary}</p>
+              <h2>{initialDeliverable.title}</h2>
+              <p>{initialDeliverable.changeSummary}</p>
             </div>
           </div>
           <div className="latest-meta">
-            <div><span>Version</span><strong>{latestDeliverable.version}</strong></div>
-            <div><span>Published</span><strong>10 Sep 2026</strong></div>
+            <div><span>Version</span><strong>{initialDeliverable.version}</strong></div>
+            <div><span>Published</span><strong>10 Aug 2026</strong></div>
             <div><span>Authors</span><strong>4 members</strong></div>
           </div>
-          <Link className="circle-arrow" href={`/deliverables/${latestDeliverable.slug}/v/${latestDeliverable.version}`} aria-label={`Open ${latestDeliverable.title} ${latestDeliverable.version}`}><ArrowUpRight /></Link>
+          <Link className="circle-arrow" href="/deliverables/planning/v/v1" aria-label="Open Planning v1"><ArrowUpRight /></Link>
         </div>
       </section>
 
