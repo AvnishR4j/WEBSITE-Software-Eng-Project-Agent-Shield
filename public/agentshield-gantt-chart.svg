@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900" role="img" aria-labelledby="title desc">
+  <title id="title">AgentShield 12-week project Gantt chart</title>
+  <desc id="desc">A twelve-week schedule for planning, design, implementation, testing and final demonstration.</desc>
+  <rect width="1400" height="900" fill="#f7f5ef"/>
+  <text x="75" y="82" font-family="Arial, sans-serif" font-size="42" font-weight="700" fill="#062d25">AgentShield — 12-Week Project Plan</text>
+  <text x="75" y="122" font-family="Arial, sans-serif" font-size="20" fill="#567068">UCS503 Software Engineering · Planning, implementation, validation and final demonstration</text>
+  <g font-family="Arial, sans-serif" font-size="16" fill="#27473f" text-anchor="middle">
+    <text x="485" y="180">W1</text><text x="555" y="180">W2</text><text x="625" y="180">W3</text><text x="695" y="180">W4</text><text x="765" y="180">W5</text><text x="835" y="180">W6</text><text x="905" y="180">W7</text><text x="975" y="180">W8</text><text x="1045" y="180">W9</text><text x="1115" y="180">W10</text><text x="1185" y="180">W11</text><text x="1255" y="180">W12</text>
+  </g>
+  <g stroke="#d7ddd9" stroke-width="1">
+    <line x1="450" y1="195" x2="450" y2="770"/><line x1="520" y1="195" x2="520" y2="770"/><line x1="590" y1="195" x2="590" y2="770"/><line x1="660" y1="195" x2="660" y2="770"/><line x1="730" y1="195" x2="730" y2="770"/><line x1="800" y1="195" x2="800" y2="770"/><line x1="870" y1="195" x2="870" y2="770"/><line x1="940" y1="195" x2="940" y2="770"/><line x1="1010" y1="195" x2="1010" y2="770"/><line x1="1080" y1="195" x2="1080" y2="770"/><line x1="1150" y1="195" x2="1150" y2="770"/><line x1="1220" y1="195" x2="1220" y2="770"/><line x1="1290" y1="195" x2="1290" y2="770"/>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="19" font-weight="600" fill="#163a31">
+    <text x="75" y="245">Requirements &amp; project planning</text><text x="75" y="315">Architecture &amp; threat model</text><text x="75" y="385">Frontend user experience</text><text x="75" y="455">Backend, authentication &amp; API</text><text x="75" y="525">Storage, publishing &amp; versioning</text><text x="75" y="595">Integration &amp; system testing</text><text x="75" y="665">Demonstration, documentation &amp; review</text><text x="75" y="735">Final presentation &amp; handover</text>
+  </g>
+  <g>
+    <rect x="450" y="215" width="140" height="38" rx="8" fill="#23a47a"/><rect x="520" y="285" width="140" height="38" rx="8" fill="#147a6b"/><rect x="590" y="355" width="210" height="38" rx="8" fill="#4ebc95"/><rect x="660" y="425" width="280" height="38" rx="8" fill="#075a4b"/><rect x="800" y="495" width="210" height="38" rx="8" fill="#89cf55"/><rect x="940" y="565" width="210" height="38" rx="8" fill="#239d83"/><rect x="1080" y="635" width="140" height="38" rx="8" fill="#77b83e"/><rect x="1220" y="705" width="70" height="38" rx="8" fill="#c9ff4c"/>
+  </g>
+  <g fill="#c9ff4c" stroke="#0b4136" stroke-width="2"><circle cx="590" cy="272" r="10"/><circle cx="800" cy="412" r="10"/><circle cx="1010" cy="552" r="10"/><circle cx="1220" cy="692" r="10"/></g>
+  <g font-family="Arial, sans-serif" font-size="15" fill="#365b51"><text x="605" y="275">Plan approved</text><text x="815" y="415">MVP ready</text><text x="1025" y="555">Testing complete</text><text x="1235" y="695">Final review</text></g>
+  <line x1="75" y1="790" x2="1290" y2="790" stroke="#9eb1aa"/>
+  <text x="75" y="835" font-family="Arial, sans-serif" font-size="17" fill="#567068">Dependencies: planning → architecture → frontend/backend → storage integration → testing → demonstration.</text>
+  <text x="75" y="865" font-family="Arial, sans-serif" font-size="15" fill="#789188">AgentShield Team · Version 1 · September 2026</text>
+</svg>
