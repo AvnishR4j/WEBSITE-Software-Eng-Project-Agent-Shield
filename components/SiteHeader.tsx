@@ -19,7 +19,7 @@ export function SiteHeader() {
           <a className="icon-link" href={project.repo} target="_blank" rel="noreferrer" aria-label="AgentShield GitHub repository">
             <GitBranch size={18} />
           </a>
-          <Link className="button button-small button-ghost" href="/admin">Publisher portal</Link>
+          <a className="button button-small button-ghost" href={project.publishingGuide} target="_blank" rel="noreferrer">Publish via GitHub</a>
         </div>
       </div>
     </header>

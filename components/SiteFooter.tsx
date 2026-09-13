@@ -13,7 +13,7 @@ export function SiteFooter() {
         <div className="footer-links">
           <Link href="/project">Project brief</Link>
           <Link href="/deliverables">Version archive</Link>
-          <Link href="/admin">Publisher portal</Link>
+          <a href={project.publishingGuide} target="_blank" rel="noreferrer">Publish via GitHub</a>
           <a href={project.repo} target="_blank" rel="noreferrer">Source repository</a>
         </div>
         <div className="footer-meta">

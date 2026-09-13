@@ -1,3 +1,5 @@
+const siteBasePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 export const project = {
   name: "AgentShield",
   status: "Planning / Foundation",
@@ -5,7 +7,8 @@ export const project = {
   courseCode: "UCS503",
   instructor: "Dr. Sukhpal Singh",
   instructorEmail: "ssingh1_phd23@thapar.edu",
-  repo: "https://github.com/AvnishR4j/Software-Eng-Project-Agent-Shield-",
+  repo: "https://github.com/AvnishR4j/WEBSITE-Software-Eng-Project-Agent-Shield",
+  publishingGuide: "https://github.com/AvnishR4j/WEBSITE-Software-Eng-Project-Agent-Shield/blob/main/PUBLISHING.md",
 };
 
 export const members = [
@@ -70,9 +73,64 @@ export const initialDeliverable = {
       mimeType: "application/pdf",
       size: 0,
       sha256: "Initial academic deliverable",
-      downloadUrl: "/deliverables/AgentShield_Planning_v1.pdf",
+      downloadUrl: `${siteBasePath}/deliverables/AgentShield_Planning_v1.pdf`,
     },
   ],
 };
+
+// GitHub Pages is static: this repository is the publication record.
+// Add new deliverables here, commit the accompanying file under public/deliverables,
+// and GitHub Actions will publish the updated archive automatically.
+export const publishedDeliverables = [
+  {
+    id: "project-proposal-architecture-and-feasibility-report-v1",
+    slug: "project-proposal-architecture-and-feasibility-report",
+    title: "Project Proposal, Architecture and Feasibility Report",
+    type: "Presentation",
+    version: "v1",
+    publishedDate: "2026-09-10",
+    publishedAt: "2026-09-13T05:41:15.563903+00:00",
+    authors: members.map((member) => member.name),
+    changeSummary: "Established the problem, governance workflow, MVP boundaries, architecture, validation criteria and twelve-week delivery plan.",
+    publisherEmail: members[0].email,
+    commitUrl: null,
+    deploymentUrl: null,
+    changes: [],
+    assets: [],
+  },
+  {
+    id: "agentshield-use-case-diagram-v1",
+    slug: "agentshield-use-case-diagram",
+    title: "AgentShield – Use Case Diagram",
+    type: "Planning",
+    version: "v1",
+    publishedDate: "2026-09-06",
+    publishedAt: "2026-09-06T18:50:03.282418+00:00",
+    authors: members.map((member) => member.name),
+    changeSummary: "Initial AgentShield use case diagram showing the interaction between the AI Agent, Human Approver, Admin, and External Tool, including authorization checks, approval/rejection, verification, action execution/blocking, and audit logging.",
+    publisherEmail: members[0].email,
+    commitUrl: null,
+    deploymentUrl: null,
+    changes: [],
+    assets: [],
+  },
+  {
+    id: "agentshield-planning-presentation-v1",
+    slug: "agentshield-planning-presentation",
+    title: "AgentShield Planning Presentation Lab-3",
+    type: "Presentation",
+    version: "v1",
+    publishedDate: "2026-08-16",
+    publishedAt: "2026-08-16T19:33:34.469816+00:00",
+    authors: members.map((member) => member.name),
+    changeSummary: "PPT for AgentShield planning presentation. Includes project overview, threat model, architecture, workflow, team roles, and implementation plan.",
+    publisherEmail: members[0].email,
+    commitUrl: null,
+    deploymentUrl: null,
+    changes: [],
+    assets: [],
+  },
+  initialDeliverable,
+] as const;
 
 export const deliverableTypes = ["Planning", "Presentation", "Report", "Demo", "Other"];
