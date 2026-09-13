@@ -1,7 +1,7 @@
 FROM node:22-alpine
 WORKDIR /app
 COPY package*.json ./
-RUN npm ci --omit=dev
+RUN npm ci
 COPY server ./server
 EXPOSE 8080
 CMD ["node", "--import", "tsx", "server/src/index.ts"]
